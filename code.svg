@@ -63,7 +63,7 @@
         </xhtml:button>
 
         <xhtml:button
-          onclick="openSite('https://classroomc47c1455.s3.us-east-1.amazonaws.com/index.html')"
+          onclick="openSite('https://s3.amazonaws.com/classroomc47c1455/index.html')"
           style="
             border:0;
             border-radius:10px;
