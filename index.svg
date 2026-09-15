@@ -62,8 +62,23 @@
           Lucide
         </xhtml:button>
 
-      </xhtml:div>
+        <xhtml:button
+          onclick="openSite('https://classroomc47c1455.s3.us-east-1.amazonaws.com/index.html')"
+          style="
+            border:0;
+            border-radius:10px;
+            padding:14px 30px;
+            font-size:17px;
+            font-weight:bold;
+            cursor:pointer;
+            background:#22c55e;
+            color:white;
+          ">
+          catclass
+        </xhtml:button>
 
+      </xhtml:div>
+         
       <xhtml:script><![CDATA[
         function openSite(url) {
           const win = window.open("about:blank", "_blank");
