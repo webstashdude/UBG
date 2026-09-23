@@ -1,44 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xhtml="http://www.w3.org/1999/xhtml"
-     width="500"
-     height="300"
-     viewBox="0 0 500 300">
+     width="100%"
+     height="100%"
+     viewBox="0 0 1000 700"
+     preserveAspectRatio="xMidYMid meet">
 
-  <rect width="500" height="300" rx="20" fill="#18181b"/>
+  <rect width="1000" height="700" rx="30" fill="#18181b"/>
 
-  <foreignObject x="0" y="0" width="500" height="300">
+  <foreignObject x="0" y="0" width="1000" height="700">
     <xhtml:div xmlns="http://www.w3.org/1999/xhtml"
                style="
                  width:100%;
                  height:100%;
+                 box-sizing:border-box;
                  display:flex;
                  flex-direction:column;
                  align-items:center;
                  justify-content:center;
-                 gap:20px;
+                 gap:35px;
                  font-family:Arial,sans-serif;
                ">
 
       <xhtml:h2 style="
         color:white;
-        margin:0 0 10px 0;
-        font-size:26px;
+        margin:0 0 15px 0;
+        font-size:42px;
       ">
         Choose a site
       </xhtml:h2>
 
       <xhtml:div style="
         display:flex;
-        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:20px;
+        max-width:850px;
       ">
 
         <xhtml:button
           onclick="openSite('https://s3.amazonaws.com/mathvc/index.html')"
           style="
             border:0;
-            border-radius:10px;
-            padding:14px 30px;
-            font-size:17px;
+            border-radius:14px;
+            padding:20px 42px;
+            font-size:22px;
             font-weight:bold;
             cursor:pointer;
             background:#3b82f6;
@@ -51,9 +56,9 @@
           onclick="openSite('https://s3.amazonaws.com/schoolsucks/index.html')"
           style="
             border:0;
-            border-radius:10px;
-            padding:14px 30px;
-            font-size:17px;
+            border-radius:14px;
+            padding:20px 42px;
+            font-size:22px;
             font-weight:bold;
             cursor:pointer;
             background:#8b5cf6;
@@ -66,9 +71,9 @@
           onclick="openSite('https://s3.amazonaws.com/classroomc47c1455/index.html')"
           style="
             border:0;
-            border-radius:10px;
-            padding:14px 30px;
-            font-size:17px;
+            border-radius:14px;
+            padding:20px 42px;
+            font-size:22px;
             font-weight:bold;
             cursor:pointer;
             background:#22c55e;
@@ -77,8 +82,38 @@
           catclass
         </xhtml:button>
 
+        <xhtml:button
+          onclick="openSite('https://s3.amazonaws.com/apgov/study.html')"
+          style="
+            border:0;
+            border-radius:14px;
+            padding:20px 42px;
+            font-size:22px;
+            font-weight:bold;
+            cursor:pointer;
+            background:#f59e0b;
+            color:white;
+          ">
+          Aether
+        </xhtml:button>
+
+        <xhtml:button
+          onclick="openSite('https://s3.amazonaws.com/bulldebut/index.html')"
+          style="
+            border:0;
+            border-radius:14px;
+            padding:20px 42px;
+            font-size:22px;
+            font-weight:bold;
+            cursor:pointer;
+            background:#ef4444;
+            color:white;
+          ">
+          bull 33
+        </xhtml:button>
+
       </xhtml:div>
-         
+
       <xhtml:script><![CDATA[
         function openSite(url) {
           const win = window.open("about:blank", "_blank");
@@ -88,7 +123,6 @@
             return;
           }
 
-          // Build the about:blank page.
           win.document.open();
           win.document.write(`
             <!DOCTYPE html>
