@@ -1,11 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xhtml="http://www.w3.org/1999/xhtml"
-     width="100%"
-     height="100%"
+     width="100vw"
+     height="100vh"
      viewBox="0 0 1000 700"
-     preserveAspectRatio="xMidYMid meet">
+     preserveAspectRatio="none">
 
-  <rect width="1000" height="700" rx="30" fill="#18181b"/>
+  <!-- Full-screen background with sharp corners -->
+  <rect width="1000" height="700" fill="#18181b"/>
 
   <foreignObject x="0" y="0" width="1000" height="700">
     <xhtml:div xmlns="http://www.w3.org/1999/xhtml"
@@ -41,7 +42,7 @@
           onclick="openSite('https://s3.amazonaws.com/mathvc/index.html')"
           style="
             border:0;
-            border-radius:14px;
+            border-radius:0;
             padding:20px 42px;
             font-size:22px;
             font-weight:bold;
@@ -56,7 +57,7 @@
           onclick="openSite('https://s3.amazonaws.com/schoolsucks/index.html')"
           style="
             border:0;
-            border-radius:14px;
+            border-radius:0;
             padding:20px 42px;
             font-size:22px;
             font-weight:bold;
@@ -71,7 +72,7 @@
           onclick="openSite('https://s3.amazonaws.com/classroomc47c1455/index.html')"
           style="
             border:0;
-            border-radius:14px;
+            border-radius:0;
             padding:20px 42px;
             font-size:22px;
             font-weight:bold;
@@ -86,7 +87,7 @@
           onclick="openSite('https://s3.amazonaws.com/apgov/study.html')"
           style="
             border:0;
-            border-radius:14px;
+            border-radius:0;
             padding:20px 42px;
             font-size:22px;
             font-weight:bold;
@@ -101,7 +102,7 @@
           onclick="openSite('https://s3.amazonaws.com/bulldebut/index.html')"
           style="
             border:0;
-            border-radius:14px;
+            border-radius:0;
             padding:20px 42px;
             font-size:22px;
             font-weight:bold;
@@ -116,7 +117,7 @@
           onclick="openSite('https://cdn.jsdelivr.net/gh/cherriunblocked/svg@latest/index.svg')"
           style="
             border:0;
-            border-radius:14px;
+            border-radius:0;
             padding:20px 42px;
             font-size:22px;
             font-weight:bold;
@@ -131,7 +132,7 @@
           onclick="openSite('https://axk4.s3.amazonaws.com/index.html')"
           style="
             border:0;
-            border-radius:14px;
+            border-radius:0;
             padding:20px 42px;
             font-size:22px;
             font-weight:bold;
@@ -146,7 +147,7 @@
           onclick="openSite('https://s3.amazonaws.com/scholarnook/index.html')"
           style="
             border:0;
-            border-radius:14px;
+            border-radius:0;
             padding:20px 42px;
             font-size:22px;
             font-weight:bold;
@@ -161,7 +162,7 @@
           onclick="openSite('https://s3.amazonaws.com/prageru-server/mathematics.html')"
           style="
             border:0;
-            border-radius:14px;
+            border-radius:0;
             padding:20px 42px;
             font-size:22px;
             font-weight:bold;
@@ -193,6 +194,7 @@
               <style>
                 html, body {
                   margin: 0;
+                  padding: 0;
                   width: 100%;
                   height: 100%;
                   overflow: hidden;
