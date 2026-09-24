@@ -1,179 +1,219 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xhtml="http://www.w3.org/1999/xhtml"
-     width="100vw"
-     height="100vh"
+     width="100%"
+     height="100%"
      viewBox="0 0 1000 700"
-     preserveAspectRatio="none">
+     preserveAspectRatio="xMidYMid meet">
 
-  <!-- Full-screen background with sharp corners -->
-  <rect width="1000" height="700" fill="#18181b"/>
+  <rect width="1000" height="700" rx="30" fill="#111113"/>
 
   <foreignObject x="0" y="0" width="1000" height="700">
     <xhtml:div xmlns="http://www.w3.org/1999/xhtml"
-               style="
-                 width:100%;
-                 height:100%;
-                 box-sizing:border-box;
-                 display:flex;
-                 flex-direction:column;
-                 align-items:center;
-                 justify-content:center;
-                 gap:35px;
-                 font-family:Arial,sans-serif;
-               ">
-
-      <xhtml:h2 style="
-        color:white;
-        margin:0 0 15px 0;
-        font-size:42px;
+      style="
+        width:100%;
+        height:100%;
+        box-sizing:border-box;
+        padding:70px 80px;
+        display:flex;
+        flex-direction:column;
+        font-family:Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        color:#f4f4f5;
+        background:
+          radial-gradient(circle at 15% 10%, rgba(255,255,255,.035), transparent 30%),
+          radial-gradient(circle at 90% 85%, rgba(255,255,255,.025), transparent 30%),
+          #111113;
       ">
-        Choose a site
-      </xhtml:h2>
 
+      <!-- Header -->
       <xhtml:div style="
         display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:20px;
-        max-width:850px;
+        align-items:flex-end;
+        justify-content:space-between;
+        margin-bottom:42px;
       ">
 
-        <xhtml:button
-          onclick="openSite('https://s3.amazonaws.com/mathvc/index.html')"
-          style="
-            border:0;
-            border-radius:0;
-            padding:20px 42px;
-            font-size:22px;
-            font-weight:bold;
-            cursor:pointer;
-            background:#3b82f6;
-            color:white;
+        <xhtml:div>
+          <xhtml:div style="
+            color:#71717a;
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:2px;
+            text-transform:uppercase;
+            margin-bottom:10px;
           ">
-          Fern
+            Vault
+          </xhtml:div>
+
+          <xhtml:h1 style="
+            margin:0;
+            font-size:46px;
+            line-height:1;
+            letter-spacing:-2px;
+            font-weight:700;
+          ">
+            choose a site
+          </xhtml:h1>
+
+          <xhtml:p style="
+            margin:14px 0 0 0;
+            color:#71717a;
+            font-size:15px;
+          ">
+            hi
+          </xhtml:p>
+        </xhtml:div>
+
+        <xhtml:div style="
+          color:#52525b;
+          font-size:12px;
+          font-weight:600;
+          letter-spacing:.5px;
+        ">
+          09 AVAILABLE
+        </xhtml:div>
+
+      </xhtml:div>
+
+      <!-- Site grid -->
+      <xhtml:div style="
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        gap:12px;
+        width:100%;
+      ">
+
+        <xhtml:button onclick="openSite('https://s3.amazonaws.com/mathvc/index.html')" class="site">
+          <xhtml:span class="number">01</xhtml:span>
+          <xhtml:span class="name">Fern</xhtml:span>
+          <xhtml:span class="arrow">↗</xhtml:span>
         </xhtml:button>
 
-        <xhtml:button
-          onclick="openSite('https://s3.amazonaws.com/schoolsucks/index.html')"
-          style="
-            border:0;
-            border-radius:0;
-            padding:20px 42px;
-            font-size:22px;
-            font-weight:bold;
-            cursor:pointer;
-            background:#8b5cf6;
-            color:white;
-          ">
-          Lucide
+        <xhtml:button onclick="openSite('https://s3.amazonaws.com/schoolsucks/index.html')" class="site">
+          <xhtml:span class="number">02</xhtml:span>
+          <xhtml:span class="name">Lucide</xhtml:span>
+          <xhtml:span class="arrow">↗</xhtml:span>
         </xhtml:button>
 
-        <xhtml:button
-          onclick="openSite('https://s3.amazonaws.com/classroomc47c1455/index.html')"
-          style="
-            border:0;
-            border-radius:0;
-            padding:20px 42px;
-            font-size:22px;
-            font-weight:bold;
-            cursor:pointer;
-            background:#22c55e;
-            color:white;
-          ">
-          catclass
+        <xhtml:button onclick="openSite('https://s3.amazonaws.com/classroomc47c1455/index.html')" class="site">
+          <xhtml:span class="number">03</xhtml:span>
+          <xhtml:span class="name">catclass</xhtml:span>
+          <xhtml:span class="arrow">↗</xhtml:span>
         </xhtml:button>
 
-        <xhtml:button
-          onclick="openSite('https://s3.amazonaws.com/apgov/study.html')"
-          style="
-            border:0;
-            border-radius:0;
-            padding:20px 42px;
-            font-size:22px;
-            font-weight:bold;
-            cursor:pointer;
-            background:#f59e0b;
-            color:white;
-          ">
-          Aether
+        <xhtml:button onclick="openSite('https://s3.amazonaws.com/apgov/study.html')" class="site">
+          <xhtml:span class="number">04</xhtml:span>
+          <xhtml:span class="name">Aether</xhtml:span>
+          <xhtml:span class="arrow">↗</xhtml:span>
         </xhtml:button>
 
-        <xhtml:button
-          onclick="openSite('https://s3.amazonaws.com/bulldebut/index.html')"
-          style="
-            border:0;
-            border-radius:0;
-            padding:20px 42px;
-            font-size:22px;
-            font-weight:bold;
-            cursor:pointer;
-            background:#ef4444;
-            color:white;
-          ">
-          bull 33
+        <xhtml:button onclick="openSite('https://s3.amazonaws.com/bulldebut/index.html')" class="site">
+          <xhtml:span class="number">05</xhtml:span>
+          <xhtml:span class="name">bull 33</xhtml:span>
+          <xhtml:span class="arrow">↗</xhtml:span>
         </xhtml:button>
 
-        <xhtml:button
-          onclick="openSite('https://cdn.jsdelivr.net/gh/cherriunblocked/svg@latest/index.svg')"
-          style="
-            border:0;
-            border-radius:0;
-            padding:20px 42px;
-            font-size:22px;
-            font-weight:bold;
-            cursor:pointer;
-            background:#ec4899;
-            color:white;
-          ">
-          Cherri
+        <xhtml:button onclick="openSite('https://cdn.jsdelivr.net/gh/cherriunblocked/svg@latest/index.svg')" class="site">
+          <xhtml:span class="number">06</xhtml:span>
+          <xhtml:span class="name">Cherri</xhtml:span>
+          <xhtml:span class="arrow">↗</xhtml:span>
         </xhtml:button>
 
-        <xhtml:button
-          onclick="openSite('https://axk4.s3.amazonaws.com/index.html')"
-          style="
-            border:0;
-            border-radius:0;
-            padding:20px 42px;
-            font-size:22px;
-            font-weight:bold;
-            cursor:pointer;
-            background:#06b6d4;
-            color:white;
-          ">
-          Glim
+        <xhtml:button onclick="openSite('https://axk4.s3.amazonaws.com/index.html')" class="site">
+          <xhtml:span class="number">07</xhtml:span>
+          <xhtml:span class="name">Glim</xhtml:span>
+          <xhtml:span class="arrow">↗</xhtml:span>
         </xhtml:button>
 
-        <xhtml:button
-          onclick="openSite('https://s3.amazonaws.com/scholarnook/index.html')"
-          style="
-            border:0;
-            border-radius:0;
-            padding:20px 42px;
-            font-size:22px;
-            font-weight:bold;
-            cursor:pointer;
-            background:#6366f1;
-            color:white;
-          ">
-          Serum OS
+        <xhtml:button onclick="openSite('https://s3.amazonaws.com/scholarnook/index.html')" class="site">
+          <xhtml:span class="number">08</xhtml:span>
+          <xhtml:span class="name">Serum OS</xhtml:span>
+          <xhtml:span class="arrow">↗</xhtml:span>
         </xhtml:button>
 
-        <xhtml:button
-          onclick="openSite('https://s3.amazonaws.com/prageru-server/mathematics.html')"
-          style="
-            border:0;
-            border-radius:0;
-            padding:20px 42px;
-            font-size:22px;
-            font-weight:bold;
-            cursor:pointer;
-            background:#14b8a6;
-            color:white;
-          ">
-          GN math
+        <xhtml:button onclick="openSite('https://s3.amazonaws.com/prageru-server/mathematics.html')" class="site">
+          <xhtml:span class="number">09</xhtml:span>
+          <xhtml:span class="name">GN math</xhtml:span>
+          <xhtml:span class="arrow">↗</xhtml:span>
         </xhtml:button>
 
       </xhtml:div>
+
+      <!-- Footer -->
+      <xhtml:div style="
+        margin-top:auto;
+        padding-top:35px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        border-top:1px solid #27272a;
+        color:#52525b;
+        font-size:11px;
+        letter-spacing:.5px;
+      ">
+        <xhtml:span>SELECT A DESTINATION</xhtml:span>
+        <xhtml:span>EXTERNAL SITES ↗</xhtml:span>
+      </xhtml:div>
+
+      <xhtml:style><![CDATA[
+        .site {
+          position:relative;
+          display:flex;
+          align-items:center;
+          width:100%;
+          height:88px;
+          box-sizing:border-box;
+          padding:0 22px;
+          border:1px solid #27272a;
+          border-radius:10px;
+          background:#18181b;
+          color:#f4f4f5;
+          cursor:pointer;
+          text-align:left;
+          font-family:inherit;
+          transition:
+            background .16s ease,
+            border-color .16s ease,
+            transform .16s ease;
+        }
+
+        .site:hover {
+          background:#1f1f22;
+          border-color:#3f3f46;
+          transform:translateY(-2px);
+        }
+
+        .site:active {
+          transform:translateY(0);
+        }
+
+        .number {
+          width:32px;
+          color:#52525b;
+          font-size:11px;
+          font-weight:700;
+          letter-spacing:1px;
+        }
+
+        .name {
+          font-size:17px;
+          font-weight:600;
+          letter-spacing:-.3px;
+        }
+
+        .arrow {
+          margin-left:auto;
+          color:#52525b;
+          font-size:18px;
+          transition:
+            color .16s ease,
+            transform .16s ease;
+        }
+
+        .site:hover .arrow {
+          color:#a1a1aa;
+          transform:translate(2px,-2px);
+        }
+      ]]></xhtml:style>
 
       <xhtml:script><![CDATA[
         function openSite(url) {
@@ -194,7 +234,6 @@
               <style>
                 html, body {
                   margin: 0;
-                  padding: 0;
                   width: 100%;
                   height: 100%;
                   overflow: hidden;
