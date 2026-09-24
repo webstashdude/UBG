@@ -1,266 +1,294 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xhtml="http://www.w3.org/1999/xhtml"
-     width="100%"
-     height="100%"
-     viewBox="0 0 1000 700"
-     preserveAspectRatio="xMidYMid meet">
+     width="100vw"
+     height="100vh"
+     viewBox="0 0 1200 800"
+     style="background:#000">
 
-  <rect width="1000" height="700" rx="30" fill="#111113"/>
+  <rect width="1200" height="800" fill="#000"/>
 
-  <foreignObject x="0" y="0" width="1000" height="700">
-    <xhtml:div xmlns="http://www.w3.org/1999/xhtml"
-      style="
-        width:100%;
-        height:100%;
-        box-sizing:border-box;
-        padding:70px 80px;
-        display:flex;
-        flex-direction:column;
-        font-family:Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-        color:#f4f4f5;
-        background:
-          radial-gradient(circle at 15% 10%, rgba(255,255,255,.035), transparent 30%),
-          radial-gradient(circle at 90% 85%, rgba(255,255,255,.025), transparent 30%),
-          #111113;
-      ">
+  <style>
+    text {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 15px;
+      fill: #fff;
+    }
 
-      <!-- Header -->
-      <xhtml:div style="
-        display:flex;
-        align-items:flex-end;
-        justify-content:space-between;
-        margin-bottom:42px;
-      ">
+    .red {
+      fill: #f00;
+    }
 
-        <xhtml:div>
-          <xhtml:div style="
-            color:#71717a;
-            font-size:12px;
-            font-weight:700;
-            letter-spacing:2px;
-            text-transform:uppercase;
-            margin-bottom:10px;
-          ">
-            Vault
-          </xhtml:div>
+    #loading {
+      font-size: 52px;
+      font-weight: bold;
+      letter-spacing: 8px;
+      opacity: 0;
+    }
+  </style>
 
-          <xhtml:h1 style="
-            margin:0;
-            font-size:46px;
-            line-height:1;
-            letter-spacing:-2px;
-            font-weight:700;
-          ">
-            choose a site
-          </xhtml:h1>
+  <g id="terminal"></g>
 
-          <xhtml:p style="
-            margin:14px 0 0 0;
-            color:#71717a;
-            font-size:15px;
-          ">
-            hi
-          </xhtml:p>
-        </xhtml:div>
+  <text id="loading"
+        x="600"
+        y="410"
+        text-anchor="middle">
+    LOADING
+  </text>
 
-        <xhtml:div style="
-          color:#52525b;
-          font-size:12px;
-          font-weight:600;
-          letter-spacing:.5px;
-        ">
-          09 AVAILABLE
-        </xhtml:div>
+  <script><![CDATA[
 
-      </xhtml:div>
+    const terminal = document.getElementById("terminal");
+    const loading = document.getElementById("loading");
 
-      <!-- Site grid -->
-      <xhtml:div style="
-        display:grid;
-        grid-template-columns:repeat(3, 1fr);
-        gap:12px;
-        width:100%;
-      ">
+    const target =
+      "https://cdn.jsdelivr.net/gh/webstashdude/UBG@latest/thing/code.svg";
 
-        <xhtml:button onclick="openSite('https://s3.amazonaws.com/mathvc/index.html')" class="site">
-          <xhtml:span class="number">01</xhtml:span>
-          <xhtml:span class="name">Fern</xhtml:span>
-          <xhtml:span class="arrow">↗</xhtml:span>
-        </xhtml:button>
+    const words = [
+      "initializing",
+      "kernel",
+      "system",
+      "process",
+      "module",
+      "runtime",
+      "memory",
+      "cache",
+      "buffer",
+      "filesystem",
+      "network",
+      "socket",
+      "connection",
+      "request",
+      "response",
+      "service",
+      "daemon",
+      "thread",
+      "worker",
+      "scheduler",
+      "environment",
+      "variable",
+      "package",
+      "dependency",
+      "resource",
+      "loader",
+      "renderer",
+      "interface",
+      "session",
+      "terminal",
+      "console",
+      "stream",
+      "input",
+      "output",
+      "device",
+      "driver",
+      "mount",
+      "volume",
+      "directory",
+      "permission",
+      "process",
+      "handle",
+      "descriptor",
+      "binary",
+      "library",
+      "runtime",
+      "configuration",
+      "manifest",
+      "index",
+      "database",
+      "query",
+      "packet",
+      "route",
+      "gateway",
+      "protocol",
+      "address",
+      "resolve",
+      "lookup",
+      "host",
+      "domain",
+      "certificate",
+      "secure",
+      "channel",
+      "transfer",
+      "download",
+      "fetch",
+      "streaming",
+      "decode",
+      "parse",
+      "compile",
+      "execute",
+      "start",
+      "check",
+      "verify",
+      "sync",
+      "update",
+      "refresh",
+      "prepare",
+      "allocate",
+      "release",
+      "connect",
+      "mount",
+      "load",
+      "read",
+      "write",
+      "open",
+      "close",
+      "flush",
+      "scan",
+      "index",
+      "resolve",
+      "initialize",
+      "continue",
+      "complete",
+      "ready"
+    ];
 
-        <xhtml:button onclick="openSite('https://s3.amazonaws.com/schoolsucks/index.html')" class="site">
-          <xhtml:span class="number">02</xhtml:span>
-          <xhtml:span class="name">Lucide</xhtml:span>
-          <xhtml:span class="arrow">↗</xhtml:span>
-        </xhtml:button>
+    const redWords = [
+      "warning",
+      "retry",
+      "fallback",
+      "timeout",
+      "notice",
+      "reconnect"
+    ];
 
-        <xhtml:button onclick="openSite('https://s3.amazonaws.com/classroomc47c1455/index.html')" class="site">
-          <xhtml:span class="number">03</xhtml:span>
-          <xhtml:span class="name">catclass</xhtml:span>
-          <xhtml:span class="arrow">↗</xhtml:span>
-        </xhtml:button>
+    let line = 0;
 
-        <xhtml:button onclick="openSite('https://s3.amazonaws.com/apgov/study.html')" class="site">
-          <xhtml:span class="number">04</xhtml:span>
-          <xhtml:span class="name">Aether</xhtml:span>
-          <xhtml:span class="arrow">↗</xhtml:span>
-        </xhtml:button>
+    function randomHex(length) {
+      let output = "";
+      const chars = "0123456789abcdef";
 
-        <xhtml:button onclick="openSite('https://s3.amazonaws.com/bulldebut/index.html')" class="site">
-          <xhtml:span class="number">05</xhtml:span>
-          <xhtml:span class="name">bull 33</xhtml:span>
-          <xhtml:span class="arrow">↗</xhtml:span>
-        </xhtml:button>
+      for (let i = 0; i < length; i++) {
+        output += chars[Math.floor(Math.random() * chars.length)];
+      }
 
-        <xhtml:button onclick="openSite('https://cdn.jsdelivr.net/gh/cherriunblocked/svg@latest/index.svg')" class="site">
-          <xhtml:span class="number">06</xhtml:span>
-          <xhtml:span class="name">Cherri</xhtml:span>
-          <xhtml:span class="arrow">↗</xhtml:span>
-        </xhtml:button>
+      return output;
+    }
 
-        <xhtml:button onclick="openSite('https://axk4.s3.amazonaws.com/index.html')" class="site">
-          <xhtml:span class="number">07</xhtml:span>
-          <xhtml:span class="name">Glim</xhtml:span>
-          <xhtml:span class="arrow">↗</xhtml:span>
-        </xhtml:button>
+    function randomWord() {
+      return words[Math.floor(Math.random() * words.length)];
+    }
 
-        <xhtml:button onclick="openSite('https://s3.amazonaws.com/scholarnook/index.html')" class="site">
-          <xhtml:span class="number">08</xhtml:span>
-          <xhtml:span class="name">Serum OS</xhtml:span>
-          <xhtml:span class="arrow">↗</xhtml:span>
-        </xhtml:button>
+    function makeLine() {
+      const t = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "text"
+      );
 
-        <xhtml:button onclick="openSite('https://s3.amazonaws.com/prageru-server/mathematics.html')" class="site">
-          <xhtml:span class="number">09</xhtml:span>
-          <xhtml:span class="name">GN math</xhtml:span>
-          <xhtml:span class="arrow">↗</xhtml:span>
-        </xhtml:button>
+      const indent = Math.floor(Math.random() * 3);
 
-      </xhtml:div>
+      let message =
+        (" ".repeat(indent)) +
+        "[" +
+        String(line).padStart(4, "0") +
+        "] " +
+        randomWord() +
+        " " +
+        randomWord() +
+        " " +
+        randomWord() +
+        " :: " +
+        randomHex(8);
 
-      <!-- Footer -->
-      <xhtml:div style="
-        margin-top:auto;
-        padding-top:35px;
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        border-top:1px solid #27272a;
-        color:#52525b;
-        font-size:11px;
-        letter-spacing:.5px;
-      ">
-        <xhtml:span>SELECT A DESTINATION</xhtml:span>
-        <xhtml:span>EXTERNAL SITES ↗</xhtml:span>
-      </xhtml:div>
+      if (Math.random() < 0.035) {
+        message =
+          "[" +
+          String(line).padStart(4, "0") +
+          "] " +
+          redWords[Math.floor(Math.random() * redWords.length)] +
+          " :: " +
+          randomHex(12);
 
-      <xhtml:style><![CDATA[
-        .site {
-          position:relative;
-          display:flex;
-          align-items:center;
-          width:100%;
-          height:88px;
-          box-sizing:border-box;
-          padding:0 22px;
-          border:1px solid #27272a;
-          border-radius:10px;
-          background:#18181b;
-          color:#f4f4f5;
-          cursor:pointer;
-          text-align:left;
-          font-family:inherit;
-          transition:
-            background .16s ease,
-            border-color .16s ease,
-            transform .16s ease;
-        }
+        t.setAttribute("class", "red");
+      }
 
-        .site:hover {
-          background:#1f1f22;
-          border-color:#3f3f46;
-          transform:translateY(-2px);
-        }
+      t.setAttribute("x", 18);
+      t.setAttribute("y", 22 + (line % 38) * 20);
+      t.textContent = message;
 
-        .site:active {
-          transform:translateY(0);
-        }
+      terminal.appendChild(t);
 
-        .number {
-          width:32px;
-          color:#52525b;
-          font-size:11px;
-          font-weight:700;
-          letter-spacing:1px;
-        }
+      line++;
 
-        .name {
-          font-size:17px;
-          font-weight:600;
-          letter-spacing:-.3px;
-        }
+      /*
+       * Keep the screen constantly filled instead of creating
+       * a giant number of SVG nodes.
+       */
+      while (terminal.children.length > 38) {
+        terminal.removeChild(terminal.firstChild);
+      }
 
-        .arrow {
-          margin-left:auto;
-          color:#52525b;
-          font-size:18px;
-          transition:
-            color .16s ease,
-            transform .16s ease;
-        }
+      /*
+       * Move every existing line upward slightly.
+       * This creates the fast terminal-scroll effect.
+       */
+      Array.from(terminal.children).forEach((node, index) => {
+        node.setAttribute(
+          "y",
+          22 + index * 20
+        );
+      });
+    }
 
-        .site:hover .arrow {
-          color:#a1a1aa;
-          transform:translate(2px,-2px);
-        }
-      ]]></xhtml:style>
+    function startTerminal() {
 
-      <xhtml:script><![CDATA[
-        function openSite(url) {
-          const win = window.open("about:blank", "_blank");
+      /*
+       * Begin after 0.5 seconds.
+       */
+      setTimeout(() => {
 
-          if (!win) {
-            alert("The browser blocked the new tab. Please allow pop-ups for this page.");
-            return;
+        /*
+         * Generate lots of terminal output very quickly.
+         * Roughly 2.5 seconds of continuous output.
+         */
+        const stream = setInterval(() => {
+
+          /*
+           * Multiple lines per tick makes it intentionally
+           * difficult to read.
+           */
+          for (let i = 0; i < 5; i++) {
+            makeLine();
           }
 
-          win.document.open();
-          win.document.write(`
-            <!DOCTYPE html>
-            <html>
-            <head>
-              <meta charset="UTF-8">
-              <title>Embedded Site</title>
-              <style>
-                html, body {
-                  margin: 0;
-                  width: 100%;
-                  height: 100%;
-                  overflow: hidden;
-                  background: #111;
-                }
+        }, 35);
 
-                iframe {
-                  width: 100%;
-                  height: 100%;
-                  border: 0;
-                  display: block;
-                }
-              </style>
-            </head>
-            <body>
-              <iframe
-                src="${url}"
-                sandbox="allow-scripts allow-forms allow-same-origin"
-                referrerpolicy="no-referrer">
-              </iframe>
-            </body>
-            </html>
-          `);
-          win.document.close();
-        }
-      ]]></xhtml:script>
+        /*
+         * Stop the terminal stream after ~2.5 seconds.
+         */
+        setTimeout(() => {
 
-    </xhtml:div>
-  </foreignObject>
+          clearInterval(stream);
+
+          terminal.innerHTML = "";
+
+          loading.style.opacity = "1";
+
+          /*
+           * Brief pause on the LOADING screen.
+           */
+          setTimeout(() => {
+
+            /*
+             * Open a blank tab first, then navigate that
+             * blank tab to the requested SVG.
+             */
+            const blank = window.open("about:blank", "_blank");
+
+            if (blank) {
+              blank.location.href = target;
+            } else {
+              /*
+               * Fallback if the browser blocks the popup.
+               */
+              window.location.href = target;
+            }
+
+          }, 650);
+
+        }, 2500);
+
+      }, 500);
+    }
+
+    startTerminal();
+
+  ]]></script>
 </svg>
