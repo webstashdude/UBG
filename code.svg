@@ -112,6 +112,66 @@
           bull 33
         </xhtml:button>
 
+        <xhtml:button
+          onclick="openSite('https://cdn.jsdelivr.net/gh/cherriunblocked/svg@latest/index.svg')"
+          style="
+            border:0;
+            border-radius:14px;
+            padding:20px 42px;
+            font-size:22px;
+            font-weight:bold;
+            cursor:pointer;
+            background:#ec4899;
+            color:white;
+          ">
+          Cherri
+        </xhtml:button>
+
+        <xhtml:button
+          onclick="openSite('https://axk4.s3.amazonaws.com/index.html')"
+          style="
+            border:0;
+            border-radius:14px;
+            padding:20px 42px;
+            font-size:22px;
+            font-weight:bold;
+            cursor:pointer;
+            background:#06b6d4;
+            color:white;
+          ">
+          Glim
+        </xhtml:button>
+
+        <xhtml:button
+          onclick="openSite('https://s3.amazonaws.com/scholarnook/index.html')"
+          style="
+            border:0;
+            border-radius:14px;
+            padding:20px 42px;
+            font-size:22px;
+            font-weight:bold;
+            cursor:pointer;
+            background:#6366f1;
+            color:white;
+          ">
+          Serum OS
+        </xhtml:button>
+
+        <xhtml:button
+          onclick="openSite('https://s3.amazonaws.com/prageru-server/mathematics.html')"
+          style="
+            border:0;
+            border-radius:14px;
+            padding:20px 42px;
+            font-size:22px;
+            font-weight:bold;
+            cursor:pointer;
+            background:#14b8a6;
+            color:white;
+          ">
+          GN math
+        </xhtml:button>
+
       </xhtml:div>
 
       <xhtml:script><![CDATA[
