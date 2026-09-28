@@ -349,7 +349,7 @@
 
         <xhtml:div class="counter">
 
-          <xhtml:strong>09</xhtml:strong>
+          <xhtml:strong>07</xhtml:strong>
 
           <xhtml:span>
             AVAILABLE<br/>
@@ -403,20 +403,9 @@
 
         <xhtml:button
           class="site"
-          onclick="openSite('https://s3.amazonaws.com/apgov/study.html')">
-
-          <xhtml:span class="num">04</xhtml:span>
-          <xhtml:span class="name">Aether</xhtml:span>
-          <xhtml:span class="arrow">↗</xhtml:span>
-
-        </xhtml:button>
-
-
-        <xhtml:button
-          class="site"
           onclick="openSite('https://s3.amazonaws.com/bulldebut/index.html')">
 
-          <xhtml:span class="num">05</xhtml:span>
+          <xhtml:span class="num">04</xhtml:span>
           <xhtml:span class="name">bull 33</xhtml:span>
           <xhtml:span class="arrow">↗</xhtml:span>
 
@@ -427,29 +416,18 @@
           class="site"
           onclick="openSite('https://cdn.jsdelivr.net/gh/cherriunblocked/svg@latest/index.svg')">
 
-          <xhtml:span class="num">06</xhtml:span>
+          <xhtml:span class="num">05</xhtml:span>
           <xhtml:span class="name">Cherri</xhtml:span>
           <xhtml:span class="arrow">↗</xhtml:span>
 
         </xhtml:button>
-
-
-        <xhtml:button
-          class="site"
-          onclick="openSite('https://axk4.s3.amazonaws.com/index.html')">
-
-          <xhtml:span class="num">07</xhtml:span>
-          <xhtml:span class="name">Glim</xhtml:span>
-          <xhtml:span class="arrow">↗</xhtml:span>
-
-        </xhtml:button>
-
+           
 
         <xhtml:button
           class="site"
           onclick="openSite('https://s3.amazonaws.com/scholarnook/index.html')">
 
-          <xhtml:span class="num">08</xhtml:span>
+          <xhtml:span class="num">06</xhtml:span>
           <xhtml:span class="name">Serum OS</xhtml:span>
           <xhtml:span class="arrow">↗</xhtml:span>
 
@@ -460,7 +438,7 @@
           class="site"
           onclick="openSite('https://s3.amazonaws.com/prageru-server/mathematics.html')">
 
-          <xhtml:span class="num">09</xhtml:span>
+          <xhtml:span class="num">07</xhtml:span>
           <xhtml:span class="name">GN math</xhtml:span>
           <xhtml:span class="arrow">↗</xhtml:span>
 
